@@ -1,0 +1,27 @@
+<div class="container my-5">
+    <h1 class="mb-3">Administrators</h1>
+ 
+        <button type="button" class="btn btn-secondary" (click)="calculateSalaries()">Display salary statistics</button>
+      <a [routerLink]="['add']">
+        <button type="button" class="btn btn-success">Add New Administrator</button>
+      </a>
+ 
+    <table class="table"> 
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let adm of admins">
+            <td>{{ adm.Id }}</td> 
+            <td>{{ adm.FirstName }}</td>
+            <td>{{ adm.LastName }}</td>
+            <td><a [routerLink]="['/administrator', 'edit', adm.Id]">View</a></td>
+          </tr> 
+        </tbody>
+    </table>
+    </div>

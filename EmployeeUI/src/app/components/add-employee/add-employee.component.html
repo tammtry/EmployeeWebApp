@@ -1,0 +1,43 @@
+<div class="container" my-5>
+    <h3 class="mb-3">Add New Employee</h3>
+
+    <form #form="ngForm" (ngSubmit)="addEmployeeSubmit()" >
+         <div class="form-floating mb-3" style="width: 100%; max-width: 22rem">
+            <input type="text" class="form-control" id="firstNameInput" 
+            name="FirstName"
+            [(ngModel)] = addEmployee.FirstName>
+            <label for="firstNameInput">First name</label>
+          </div>
+          <div class="form-floating mb-3" style="width: 100%; max-width: 22rem">
+            <input type="text" class="form-control" id="lastNameInput"
+            name="LastName"
+            [(ngModel)] = addEmployee.LastName>
+            <label for="lastName">Last name</label>
+          </div>
+          <div class="form-floating mb-3" style="width: 100%; max-width: 22rem">
+            <input type="email" class="form-control" id="emailInput"
+            name="Email"
+            [(ngModel)] = addEmployee.Email>
+            <label for="emailInput">Email address</label>
+          </div>
+          <div class="form-floating mb-3" style="width: 100%; max-width: 22rem">
+            <input type="tel" class="form-control" id="phoneNumberInput"
+            name="PhoneNumber"
+            [(ngModel)] = addEmployee.PhoneNumber>
+            <label for="phoneNumberInput">Phone Number</label>
+          </div>
+          <div class="form-floating mb-3" style="width: 100%; max-width: 22rem">
+            <input type="date" class="form-control" id="dateOfBirthInput"
+            name="DateOfBirth" value="2023-03-11"
+            [(ngModel)] = addEmployee.DateOfBirth>
+            <label for="dateOfBirthInput">Date Of Birth</label>
+          </div>
+          <div class="form-floating mb-3" style="width: 100%; max-width: 22rem">
+            <input type="text" class="form-control" id="salaryInput"
+            name="MonthlySalary"
+            [(ngModel)] = addEmployee.MonthlySalary>
+            <label for="salaryInput">Monthly Salary</label>
+          </div>
+          <button type="submit" class="btn btn-primary">Add</button>
+    </form>
+</div>

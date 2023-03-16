@@ -1,0 +1,32 @@
+<div class="container my-5">
+    <h3 class="mb-3">Highest salary</h3>
+    
+    <table class="table"> 
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Email</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Birth</th>
+            <th scope="col">Salary</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let emp of employeeSalary">
+            <td>{{ emp.Id }}</td> 
+            <td>{{ emp.FirstName }}</td>
+            <td>{{ emp.LastName }}</td>
+            <td>{{ emp.Email }}</td>
+            <td>{{ emp.PhoneNumber }}</td>
+            <td>{{ emp.DateOfBirth }}</td>
+            <td>{{ emp.MonthlySalary }}</td>
+            <td><a [routerLink]="['/employee', 'edit', emp.Id]">View</a></td>
+          </tr> 
+        </tbody>
+    </table>
+    
+    
+    </div>

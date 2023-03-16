@@ -1,0 +1,32 @@
+<div class="container my-5">
+    <h1 class="mb-3">Tasks</h1>
+    <a [routerLink]="['/task/display']">
+      <button type="button" class="btn btn-info">Display the most successful employees</button>
+    </a>
+    
+    
+    <table class="table"> 
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Title</th>
+            <th scope="col">Description</th>
+            <th scope="col">Asignee Id</th>
+            <th scope="col">Due Date</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let tsk of tasks">
+            <td>{{ tsk.Id }}</td> 
+            <td>{{ tsk.Title }}</td>
+            <td>{{ tsk.Description }}</td>
+            <td>{{ tsk.AsigneeId }}</td>
+            <td>{{ tsk.DueDate }}</td>
+            <td><a [routerLink]="['/task', 'edit', tsk.Id]">View</a></td>
+          </tr> 
+        </tbody>
+    </table>
+    
+    
+    </div>

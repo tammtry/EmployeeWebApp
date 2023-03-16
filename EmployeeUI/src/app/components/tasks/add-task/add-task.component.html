@@ -1,0 +1,26 @@
+<div class="container" my-5>
+    <h3 class="mb-3">Add New Task</h3>
+
+    <form #form="ngForm" (ngSubmit)="addTaskSubmit()" >
+         <div class="form-floating mb-3" style="width: 100%; max-width: 22rem">
+            <input type="text" class="form-control" id="titleInput" 
+            name="FirstName"
+            [(ngModel)] = addTask.Title>
+            <label for="titleInput">Title</label>
+          </div>
+          <div class="form-floating mb-3" style="width: 100%; max-width: 22rem">
+            <input type="text" class="form-control" id="descriptionInput"
+            name="LastName"
+            [(ngModel)] = addTask.Description>
+            <label for="descriptionInput">Description</label>
+          </div>
+          <div class="form-floating mb-3" style="width: 100%; max-width: 22rem">
+            <input type="date" class="form-control" id="dueDateInput"
+            value="2023-03-11"
+            name="DueDate"
+            [(ngModel)] = addTask.DueDate>
+            <label for="dueDateInput">Due Date</label>
+          </div>
+          <button type="submit" class="btn btn-primary">Add</button>
+    </form>
+</div>

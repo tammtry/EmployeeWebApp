@@ -1,0 +1,38 @@
+<div class="container" my-5>
+    <h3 class="mb-3">Edit Task</h3>
+
+    <form #form="ngForm" (ngSubmit)="updateTask()">
+        <div class="form-floating mb-3" style="width: 100%; max-width: 22rem">
+            <input type="text" class="form-control" id="id" readonly disabled
+            name="Id"
+            [(ngModel)] = taskDetails.Id>
+            <label for="id">Id</label>
+          </div>
+         <div class="form-floating mb-3" style="width: 100%; max-width: 22rem">
+            <input type="text" class="form-control" id="titleInput" 
+            name="Title"
+            [(ngModel)] = taskDetails.Title>
+            <label for="titleInput">Title</label>
+          </div>
+          <div class="form-floating mb-3" style="width: 100%; max-width: 22rem">
+            <input type="text" class="form-control" id="descriptionInput"
+            name="Description"
+            [(ngModel)] = taskDetails.Description>
+            <label for="descriptionInput">Description</label>
+          </div>
+          <div class="form-floating mb-3" style="width: 100%; max-width: 22rem">
+            <input type="text" class="form-control" id="asigneeIdInput" readonly
+            name="AsigneeId"
+            [(ngModel)] = taskDetails.AsigneeId>
+            <label for="asigneeIdInput">Asignee Id</label>
+          </div>
+          <div class="form-floating mb-3" style="width: 100%; max-width: 22rem">
+            <input type="date" class="form-control" id="dueDateInput"
+            name="DueDate"
+            [(ngModel)] = taskDetails.DueDate>
+            <label for="dueDateInput">Due Date</label>
+          </div>
+          <button type="submit" class="btn btn-primary">Save</button>
+          <button type="button" class="btn btn-danger" (click)="deleteTask(taskDetails.Id)">Delete</button>
+    </form>
+</div>

@@ -1,0 +1,19 @@
+<div class="container" my-5>
+    <h3 class="mb-3">Add New Administrator</h3>
+
+    <form #form="ngForm" (ngSubmit)="addEmployeeSubmit()" >
+         <div class="form-floating mb-3" style="width: 100%; max-width: 22rem">
+            <input type="text" class="form-control" id="firstNameInput" 
+            name="FirstName"
+            [(ngModel)] = addAdmin.FirstName>
+            <label for="firstNameInput">First name</label>
+          </div>
+          <div class="form-floating mb-3" style="width: 100%; max-width: 22rem">
+            <input type="text" class="form-control" id="lastNameInput"
+            name="LastName"
+            [(ngModel)] = addAdmin.LastName>
+            <label for="lastName">Last name</label>
+          </div>
+          <button type="submit" class="btn btn-primary">Add</button>
+    </form>
+</div>
